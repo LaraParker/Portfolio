@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to top, rgb(149, 148, 148) 25%,rgb(194, 193, 193) 25%);
+  display: flex;
+}
+
+/* intro container */
+.intro {
+  position: fixed;
+  inset: 0;
+  transition:
+  transform 1.2s cubic-bezier(.4,0,.2,1),
+  opacity 1.2s ease;
+
+  will-change: transform, opacity;
+}
+
+.intro.zooming {
+  opacity: 0;
+}
+
+/* desk image */
+.desk-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  transform: scale(1.1);
+  margin-top: 20px;
+}
+
+/* invisible clickable screen */
+.screen-hitbox {
+  position: fixed;
+  background: rgba(0,255,0,0.3);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* portfolio */
+.portfolio {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  color: white;
+  padding: 40px;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}
+
+.portfolio.visible {
+  opacity: 1;
+  pointer-events: auto;
+}

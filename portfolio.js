@@ -6,7 +6,7 @@ const deskImage = document.querySelector(".desk-image");
 const IMAGE_WIDTH = 2732;
 const IMAGE_HEIGHT = 2048;
 const SCREEN_BOX = {
-  x: 950,
+  x: 970,
   y: 365,
   width: 670,
   height: 351
@@ -105,7 +105,7 @@ screen.addEventListener("click", () => {
   }, 1200);
 });
 
-function playHandwrite(word = "Bewerbung", durationMs = 2200) {
+function playHandwrite(word = "Portfolio", durationMs = 2200) {
   const textEl = document.getElementById("handwriteText");
   if (!textEl) return;
 
@@ -126,4 +126,4 @@ function playHandwrite(word = "Bewerbung", durationMs = 2200) {
   requestAnimationFrame(tick);
 }
 
-playHandwrite("Bewerbung");
+playHandwrite("Portfolio");

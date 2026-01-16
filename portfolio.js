@@ -6,11 +6,25 @@ const deskImage = document.querySelector(".desk-image");
 const IMAGE_WIDTH = 2732;
 const IMAGE_HEIGHT = 2048;
 const SCREEN_BOX = {
-  x: 930,
+  x: 950,
   y: 365,
   width: 670,
   height: 351
 };
+
+const lamp = document.getElementById("lamp");
+
+const LAMP_BOX = {
+  x: 630,
+  y: 250,
+  width: 230, 
+  height: 200
+};
+
+let isDark = false;
+
+const lightSrc = "pictures/lightModeOpen.png";
+const darkSrc = "pictures/nightMode2.png";
 
 function updateScreenHitbox() {
   const imgRect = deskImage.getBoundingClientRect();
@@ -29,7 +43,17 @@ function updateScreenHitbox() {
   screen.style.top = imgRect.top + offsetY + SCREEN_BOX.y * scale + "px";
   screen.style.width = SCREEN_BOX.width * scale + "px";
   screen.style.height = SCREEN_BOX.height * scale + "px";
+
+  lamp.style.left = imgRect.left + offsetX + LAMP_BOX.x * scale + "px";
+  lamp.style.top = imgRect.top + offsetY + LAMP_BOX.y * scale + "px ";
+  lamp.style.width = LAMP_BOX.width * scale + "px";
+  lamp.style.height = LAMP_BOX.height * scale + "px";
 }
+lamp.addEventListener("click", () => {
+  isDark = !isDark;
+  deskImage.src = isDark ? darkSrc : lightSrc;
+  document.body.classList.toggle("dark", isDark);
+});
 
 // Update on load and resize
 deskImage.addEventListener("load", updateScreenHitbox);
@@ -81,25 +105,24 @@ screen.addEventListener("click", () => {
   }, 1200);
 });
 
-function playHandwrite(word = "Bewerbung", durationMa = 2200) {
+function playHandwrite(word = "Bewerbung", durationMs = 2200) {
   const textEl = document.getElementById("handwriteText");
   if (!textEl) return;
 
   textEl.textContent = word;
 
   textEl.classList.remove("play");
-  void textEl.offsetWidth;
+  void textEl.offsetWidth; // restart animation
   textEl.classList.add("play");
 
   const start = performance.now();
 
   function tick(now) {
-    constt = Math.min(1, (now - start) / durationMs);
-
-    const rect = textEl.getBoundingClientRect();
-    const x = rect.left + rect.width * textEl;
-    consty = rect.top + rect.height * 0.75;
+    const t = Math.min(1, (now - start) / durationMs);
+    // if you later need t for something, use it here
+    if (t < 1) requestAnimationFrame(tick);
   }
+
   requestAnimationFrame(tick);
 }
 

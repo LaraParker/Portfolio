@@ -80,3 +80,27 @@ screen.addEventListener("click", () => {
     document.body.style.overflow = "auto";
   }, 1200);
 });
+
+function playHandwrite(word = "Bewerbung", durationMa = 2200) {
+  const textEl = document.getElementById("handwriteText");
+  if (!textEl) return;
+
+  textEl.textContent = word;
+
+  textEl.classList.remove("play");
+  void textEl.offsetWidth;
+  textEl.classList.add("play");
+
+  const start = performance.now();
+
+  function tick(now) {
+    constt = Math.min(1, (now - start) / durationMs);
+
+    const rect = textEl.getBoundingClientRect();
+    const x = rect.left + rect.width * textEl;
+    consty = rect.top + rect.height * 0.75;
+  }
+  requestAnimationFrame(tick);
+}
+
+playHandwrite("Bewerbung");

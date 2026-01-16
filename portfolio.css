@@ -27,7 +27,7 @@ body {
 
 .text-bubble p {
   position: absolute;
-  inset: 22% 37% 34% 34%;
+  inset: 23% 37% 34% 34%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,6 +76,45 @@ body {
   position: fixed;
   cursor: pointer;
   z-index: 10;
+}
+
+.handwrite-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.handwrite-text {
+  font-size: clamp(18px, 3vw, 40px);
+  color: white;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 0 0 12px rgba(255,255,255,0.55);
+  display: inline-block;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 95%,
+    transparent 100%
+  );
+}
+
+.handwrite-text.play {
+  animation: reveal 2.2s ease forwards;
+}
+
+@keyframes reveal{
+  from { width: 0ch; }
+  to   { width: 9ch; } 
 }
 
 /* portfolio */

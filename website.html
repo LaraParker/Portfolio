@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Portfolio – Fachinformatikerin</title>
+  <link rel="stylesheet" href="website.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- HERO / PARALLAX INTRO -->
+  <header class="hero" id="top" aria-label="Intro">
+    <div class="hero-sticky">
+      <div class="topbar">
+        <a class="brand" href="#top">Lara</a>
+
+        <nav class="nav" aria-label="Navigation">
+          <a href="#about">Über mich</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projekte</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+
+        <button class="mode" id="modeToggle" type="button" aria-label="Dark Mode umschalten">
+          <span class="mode-dot" aria-hidden="true"></span>
+          <span class="mode-text" id="modeText">Dark</span>
+        </button>
+      </div>
+
+      <div class="hero-card" role="img" aria-label="Silhouette vor Code">
+        <img class="hero-img" src="pictures/hero.png" alt="" />
+        <div class="hero-glass" aria-hidden="true"></div>
+        <div class="hero-content">
+          <h1>Portfolio</h1>
+          <p>Ausbildung zur <strong>Fachinformatikerin</strong> (Anwendungsentwicklung)</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">Zu den Projekten</a>
+            <a class="btn btn-ghost" href="#contact">Kontakt</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll" aria-hidden="true">
+        <div class="scroll-icon">✳︎</div>
+        <div class="scroll-text">Scroll</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <section class="section" id="about">
+      <h2>Über mich</h2>
+      <div class="card">
+        <p>
+          Hallo! Ich bin <strong>Lara</strong> und mache eine Ausbildung zur Fachinformatikerin.
+          Ich interessiere mich besonders für Webentwicklung, sauberen Code und UI/UX.
+        </p>
+        <ul class="bullets">
+          <li><strong>Fokus:</strong> Frontend / Web</li>
+          <li><strong>Stärken:</strong> strukturiertes Arbeiten, Neugier, Teamarbeit</li>
+          <li><strong>Ziel:</strong> praktische Projekte bauen und kontinuierlich lernen</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, Responsive Design</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JS</span>
+            <span class="tag">UI</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Tools</h3>
+          <p>Git/GitHub, VS Code, Debugging, Browser DevTools</p>
+          <div class="tags">
+            <span class="tag">Git</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">DevTools</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Soft Skills</h3>
+          <p>Kommunikation, Lernbereitschaft, Problemlösung</p>
+          <div class="tags">
+            <span class="tag">Team</span>
+            <span class="tag">Learning</span>
+            <span class="tag">Problem Solving</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Projekte</h2>
+      <div class="grid">
+        <article class="card project">
+          <div class="project-head">
+            <h3>Projekt 1</h3>
+            <span class="pill">Web</span>
+          </div>
+          <p>Kurzbeschreibung deines Projekts: Was war die Aufgabe? Was hast du gebaut?</p>
+          <ul class="bullets">
+            <li>Technologien: HTML/CSS/JS</li>
+            <li>Highlights: Parallax, responsive Layout, saubere Struktur</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" aria-label="Live Demo">Demo</a>
+            <a href="#" aria-label="GitHub Repository">Code</a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <div class="project-head">
+            <h3>Projekt 2</h3>
+            <span class="pill">App</span>
+          </div>
+          <p>Hier kannst du ein weiteres Projekt hinzufügen.</p>
+          <ul class="bullets">
+            <li>Was hast du gelernt?</li>
+            <li>Welche Probleme hast du gelöst?</li>
+          </ul>
+          <div class="project-links">
+            <a href="#">Demo</a>
+            <a href="#">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Kontakt</h2>
+      <div class="card">
+        <p>Wenn du möchtest, kannst du mich hier erreichen:</p>
+        <div class="contact-grid">
+          <a class="contact" href="mailto:deinname@example.com">
+            <span class="contact-label">E-Mail</span>
+            <span class="contact-value">deinname@example.com</span>
+          </a>
+          <a class="contact" href="#">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/deinprofil</span>
+          </a>
+          <a class="contact" href="#">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/deinprofil</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="legal">
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Lara</span>
+        <div class="footer-links">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="website.js"></script>
+</body>
+</html>

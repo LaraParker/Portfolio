@@ -30,18 +30,30 @@
         </button>
       </div>
 
-      <div class="hero-card" role="img" aria-label="Silhouette vor Code">
-        <img class="hero-img" src="pictures/hero.png" alt="" />
-        <div class="hero-glass" aria-hidden="true"></div>
-        <div class="hero-content">
-          <h1>Portfolio</h1>
-          <p>Ausbildung zur <strong>Fachinformatikerin</strong> (Anwendungsentwicklung)</p>
-          <div class="hero-cta">
-            <a class="btn" href="#projects">Zu den Projekten</a>
-            <a class="btn btn-ghost" href="#contact">Kontakt</a>
-          </div>
-        </div>
-      </div>
+<div class="hero-card" aria-label="Parallax Hero">
+
+  <!-- BACKGROUND (code) -->
+  <img class="layer layer--bg" src="pictures/code-bg.png" alt="" aria-hidden="true">
+
+  <!-- TEXT (will move behind silhouette) -->
+  <div class="layer layer--text">
+    <h1 class="hero-title">Portfolio</h1>
+    <p class="hero-subtitle">
+      Ausbildung zur <strong>Fachinformatikerin</strong> (Anwendungsentwicklung)
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn" href="#projects">Zu den Projekten</a>
+      <a class="btn btn-ghost" href="#contact">Kontakt</a>
+    </div>
+  </div>
+
+  <!-- FOREGROUND (silhouette PNG with transparency) -->
+  <img class="layer layer--fg" src="pictures/silhouette.png" alt="" aria-hidden="true">
+
+  <!-- optional fade into page color -->
+  <div class="hero-fade" aria-hidden="true"></div>
+</div>
 
       <div class="scroll" aria-hidden="true">
         <div class="scroll-icon">✳︎</div>
@@ -53,53 +65,45 @@
   <!-- MAIN CONTENT -->
   <main class="main">
     <section class="section" id="about">
-      <h2>Über mich</h2>
-      <div class="card">
-        <p>
-          Hallo! Ich bin <strong>Lara</strong> und mache eine Ausbildung zur Fachinformatikerin.
-          Ich interessiere mich besonders für Webentwicklung, sauberen Code und UI/UX.
-        </p>
-        <ul class="bullets">
-          <li><strong>Fokus:</strong> Frontend / Web</li>
-          <li><strong>Stärken:</strong> strukturiertes Arbeiten, Neugier, Teamarbeit</li>
-          <li><strong>Ziel:</strong> praktische Projekte bauen und kontinuierlich lernen</li>
-        </ul>
+      <div class="about-layout">
+        <div class="about-img">
+          <img src="pictures/me.jpg" alt="Foto von mir">
+        </div>
+    
+        <div class="about-text">
+          <h2>Über mich</h2>
+          <p>
+            Hallo! Ich bin <strong>Lara</strong> und mache eine Ausbildung zur Fachinformatikerin.
+            Ich interessiere mich besonders für Webentwicklung, sauberen Code und UI/UX.
+          </p>
+          <ul class="bullets">
+            <li><strong>Fokus:</strong> Frontend / Web</li>
+            <li><strong>Stärken:</strong> strukturiertes Arbeiten, Neugier, Teamarbeit</li>
+            <li><strong>Ziel:</strong> praktische Projekte bauen und kontinuierlich lernen</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="section" id="skills">
-      <h2>Skills</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Frontend</h3>
-          <p>HTML, CSS, JavaScript, Responsive Design</p>
-          <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JS</span>
-            <span class="tag">UI</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Tools</h3>
-          <p>Git/GitHub, VS Code, Debugging, Browser DevTools</p>
-          <div class="tags">
-            <span class="tag">Git</span>
-            <span class="tag">VS Code</span>
-            <span class="tag">DevTools</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Soft Skills</h3>
-          <p>Kommunikation, Lernbereitschaft, Problemlösung</p>
-          <div class="tags">
-            <span class="tag">Team</span>
-            <span class="tag">Learning</span>
-            <span class="tag">Problem Solving</span>
-          </div>
-        </article>
+      <h2 class="skills-title">Skills</h2>
+    
+      <div class="skills-grid">
+        <div class="skill-box">
+          <img src="pictures/html.png" alt="HTML">
+        </div>
+      
+        <div class="skill-box">
+          <img src="pictures/css.png" alt="CSS">
+        </div>
+      
+        <div class="skill-box">
+          <img src="pictures/js.png" alt="JavaScript">
+        </div>
+      
+        <div class="skill-box">
+          <img src="pictures/github.png" alt="GitHub">
+        </div>
       </div>
     </section>
 
@@ -108,32 +112,39 @@
       <div class="grid">
         <article class="card project">
           <div class="project-head">
-            <h3>Projekt 1</h3>
-            <span class="pill">Web</span>
+            <h3>Background Color Changer</h3>
           </div>
-          <p>Kurzbeschreibung deines Projekts: Was war die Aufgabe? Was hast du gebaut?</p>
-          <ul class="bullets">
-            <li>Technologien: HTML/CSS/JS</li>
-            <li>Highlights: Parallax, responsive Layout, saubere Struktur</li>
-          </ul>
+          <div class="project-img">
+            <img src="pictures/project1.png" alt="Project 1 screenshot">
+            <div class="project-overlay">
           <div class="project-links">
-            <a href="#" aria-label="Live Demo">Demo</a>
-            <a href="#" aria-label="GitHub Repository">Code</a>
+            <a href="#">Demo</a>
+            <a href="#">Code</a>
           </div>
         </article>
 
         <article class="card project">
           <div class="project-head">
-            <h3>Projekt 2</h3>
-            <span class="pill">App</span>
+            <h3>Digital Clock</h3>
           </div>
-          <p>Hier kannst du ein weiteres Projekt hinzufügen.</p>
-          <ul class="bullets">
-            <li>Was hast du gelernt?</li>
-            <li>Welche Probleme hast du gelöst?</li>
-          </ul>
+          <div class="project-img">
+            <img src="pictures/project2.png" alt="Project 1 screenshot">
+            <div class="project-overlay">
           <div class="project-links">
             <a href="#">Demo</a>
+            <a href="#">Code</a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <div class="project-head">
+            <h3>Rock Paper Scissors</h3>
+          </div>
+          <div class="project-img">
+            <img src="pictures/project2.png" alt="Project 1 screenshot">
+            <div class="project-overlay">
+          <div class="project-links">
+            <a href="#">In Progress</a>
             <a href="#">Code</a>
           </div>
         </article>

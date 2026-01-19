@@ -1,0 +1,157 @@
+body.intro-active {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to top, rgb(149, 148, 148) 25%,rgb(194, 193, 193) 25%);
+  display: flex;
+}
+
+body.intro-active.dark {
+  background: linear-gradient(to top, #111 25%, #1a1a1a 25%);
+}
+
+.text-bubble {
+  position: absolute;
+  width: clamp(450px, 40vw, 760px);
+  max-width: 520px;
+  min-width: 220px;
+  z-index: 20;
+  left: 93%;
+  top: 42%;
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+}
+
+.bubble-pic {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-bubble p {
+  position: absolute;
+  inset: 23% 37% 34% 34%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: clamp(12px, 1vw, 18px);
+  line-height: 1.0;
+  color: black;
+}
+
+#zzz-dark {display: none;}
+
+body.dark #bubbleLight {display: none;}
+body.dark .text-bubble p {display: none;}
+
+body.dark #zzz-dark{
+  display: block;
+}
+
+/* intro container */
+.intro {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+  transform 1.2s cubic-bezier(.4,0,.2,1),
+  opacity 1.2s ease;
+  will-change: transform, opacity;
+}
+
+.scene {
+  position: relative;
+  width: min(1100px, 100vw);
+}
+
+.intro.zooming {
+  opacity: 0;
+}
+
+/* desk image */
+.desk-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  transform: scale(1.1);
+  margin-top: 20px;
+}
+
+/* invisible clickable screen */
+.screen-hitbox {
+  position: fixed;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.handwrite-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.handwrite-text {
+  font-size: clamp(18px, 3vw, 40px);
+  color: black;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 0 0 12px rgba(255,255,255,0.55);
+  display: inline-block;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 95%,
+    transparent 100%
+  );
+}
+
+body.dark #handwriteText {
+  color: white;
+}
+
+.handwrite-text.play {
+  animation: reveal 2.2s ease forwards;
+}
+
+@keyframes reveal{
+  from { width: 0ch; }
+  to   { width: 9ch; } 
+}
+
+.lamp-hitbox {
+  position: fixed;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+/* portfolio */
+.portfolio {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.portfolio.visible {
+  opacity: 1;
+  pointer-events: auto;
+}

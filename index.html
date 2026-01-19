@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <div class="intro" id="intro">
+      <div class="scene">
+        <img class="desk-image" src="intro-pictures/lightModeOpen.png" alt="">
+  
+      <div class="text-bubble">
+        <img class="bubble-pic" id="bubbleLight" src="intro-pictures/text-bubble.png" alt="">
+        <img class="bubble-pic" id="zzz-dark" src="intro-pictures/zzz.png" alt="">
+        <p>Klicke auf den Bildschirm für das Portfolio und auf die Lampe für Dark/Light Mode.</p>
+      </div>
+  
+      <div class="screen-hitbox" id="screen">
+        <div class="handwrite-overlay">
+          <span class="handwrite-text" id="handwriteText">Portfolio</span>
+        </div>
+      </div>
+
+      <div class="lamp-hitbox" id="lamp"></div>
+
+      </div>
+    </div>
+  
+    <div class="portfolio" id="portfolio">
+      <header class="hero" id="top" aria-label="Intro">
+        <div class="topbar">
+          <a class="brand" href="#top">Lara</a>
+    
+          <nav class="nav" aria-label="Navigation">
+            <a href="#about">Über mich</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projekte</a>
+            <a href="#contact">Kontakt</a>
+          </nav>
+    
+          <button class="mode" id="modeToggle" type="button" aria-label="Dark Mode umschalten">
+            <span class="mode-dot" aria-hidden="true"></span>
+            <span class="mode-text" id="modeText">Dark</span>
+          </button>
+        </div>
+    
+        <img class="hero-img" id="heroImg" src="pictures/hero.png" alt="" />
+        <div class="hero-content">
+          <h1>Portfolio</h1>
+        </div>
+        <div class="hero-fade" aria-hidden="true"></div>
+      </header>
+    
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <div class="block">
+          <section class="section" id="about">
+            <div class="about-layout">
+              <div class="about-img">
+                <img src="pictures/me.jpg" alt="Foto von mir">
+              </div>
+          
+              <div>
+                <h2 class="section-title1">Über mich</h2>
+                <div class="about-text">
+                  <p>
+                    Hallo, ich bin Lara!<br>Ich interessiere mich für die Programmierung und strebe eine Ausbildung zur Fachinformatikerin für Anwendungsentwicklung an.<br><br>
+                    Mein Interesse an IT hat mich dazu gebracht, mir HTML, CSS und grundlegendes JavaScript selbstständig beizubringen. Ich arbeite mit Tutorials, eigenen kleinen Projekten und viel praktischer Übung.<br><br>
+                    Die Ausbildung zur Fachinformatikerin für Anwendungsentwicklung sehe ich als gute Möglichkeit, meine selbstständige Lernweise in ein professionelles Umfeld einzubringen und mich fachlich weiterzuentwickeln. Dabei möchte ich nicht nur meine bisherigen Kenntnisse vertiefen, sondern auch weitere Programmiersprachen kennenlernen, insbesondere auch im Backend Bereich.
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <div class="block">
+          <section class="section" id="skills">
+            <h2 class="section-title">Skills</h2>
+          
+            <div class="skills-grid">
+              <div class="skill-box">
+                <img src="pictures/html.png" alt="HTML">
+              </div>
+            
+              <div class="skill-box">
+                <img src="pictures/css.png" alt="CSS">
+              </div>
+            
+              <div class="skill-box">
+                <img src="pictures/js.png" alt="JavaScript">
+              </div>
+            
+              <div class="skill-box">
+                <img src="pictures/github.png" alt="GitHub">
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <div class="block">
+          <section class="section" id="projects">
+            <h2 class="section-title">Projekte</h2>
+            <div class="grid">
+              <article class="card project">
+                <div class="project-head">
+                  <h3>Background Color Changer</h3>
+                </div>
+                <div class="project-img">
+                  <img src="pictures/project1.png" alt="Project 1 screenshot">
+                  <div class="project-overlay">
+              </article>
+      
+              <article class="card project">
+                <div class="project-head">
+                  <h3>Digital Clock</h3>
+                </div>
+                <div class="project-img">
+                  <img src="pictures/project2.png" alt="Project 1 screenshot">
+                  <div class="project-overlay">
+              </article>
+      
+              <article class="card project">
+                <div class="project-head">
+                  <h3>3D Hover Circle</h3>
+                </div>
+                <div class="project-img">
+                  <img src="pictures/3dHoverCircle.png" alt="Project 1 screenshot">
+                  <div class="project-overlay">
+              </article>
+      
+              <article class="card project">
+                <div class="project-head">
+                  <h3>Border Animation</h3>
+                </div>
+                <div class="project-img">
+                  <img src="pictures/borderAnimation.png" alt="Project 1 screenshot">
+                  <div class="project-overlay">
+              </article>
+      
+              <article class="card project">
+                <div class="project-head">
+                  <h3>Rock Paper Scissors</h3>
+                </div>
+                <div class="project-img">
+                  <img src="pictures/rps.png" alt="Project 1 screenshot">
+                  <div class="progress-band">In Progress</div>
+                  <div class="project-overlay">
+              </article>
+            </div>
+          </section>
+        </div>
+    
+        <div class="block">
+          <section class="section" id="contact">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="card">
+              <p>Wenn Sie möchten, können Sie mich hier erreichen:</p>
+              <div class="contact-grid">
+                <a class="contact" href="mailto:virsekziger.lara@gmail.com">
+                  <span class="contact-label">E-Mail</span>
+                  <span class="contact-value">virsekziger.lara@gmail.com</span>
+                </a>
+                <a class="contact" href="https://github.com/LaraParker" target="_blank">
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">https://github.com/LaraParker</span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+    
+    
+        <footer class="footer" id="legal">
+          <div class="footer-inner">
+          </div>
+        </footer>
+      </main>
+    </div>
+  
+    <script src="intro.js"></script>
+    <script src="portfolio.js"></script>
+  
+  </body>
+  
+
+</html>

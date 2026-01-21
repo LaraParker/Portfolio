@@ -121,6 +121,8 @@ body.light .mode{ background: rgba(255,255,255,0.55); }
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 5px;
 }
 
 .hero-content h1{
@@ -287,16 +289,8 @@ body.light .hero-content p{ color: rgba(0,0,0,0.70); }
   margin: 0 0 10px;
 }
 
-.project-links{
-  display: flex;
-  gap: 12px;
-}
-
-.project-links a{
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.3);
-  text-decoration: none;
+.project-link {
+  display: block;
 }
 
 .card{
@@ -324,6 +318,10 @@ body.light .hero-content p{ color: rgba(0,0,0,0.70); }
 }
 
 .grid > .card{ 
+  grid-column: span 4; 
+}
+
+.grid > .project-link{ 
   grid-column: span 4; 
 }
 

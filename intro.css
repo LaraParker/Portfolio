@@ -50,7 +50,6 @@ body.dark #zzz-dark{
   display: block;
 }
 
-/* intro container */
 .intro {
   position: fixed;
   inset: 0;
@@ -72,7 +71,6 @@ body.dark #zzz-dark{
   opacity: 0;
 }
 
-/* desk image */
 .desk-image {
   display: block;
   width: 100%;
@@ -83,7 +81,6 @@ body.dark #zzz-dark{
   margin-top: 20px;
 }
 
-/* invisible clickable screen */
 .screen-hitbox {
   position: fixed;
   cursor: pointer;

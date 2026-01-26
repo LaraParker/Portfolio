@@ -9,7 +9,6 @@
   --radius: 22px;
 }
 
-/* Light mode overrides */
 body.light{
   --bg: #f6f7fb;
   --bg2: #eef1f9;
@@ -215,7 +214,7 @@ body.light .hero-content p{ color: rgba(0,0,0,0.70); }
 .skills-grid{
   display: grid;
   grid-template-columns: repeat(4, 120px);
-  justify-content: center;   /* centers the whole grid */
+  justify-content: center;  
   gap: 40px;
 }
 
@@ -325,7 +324,6 @@ body.light .hero-content p{ color: rgba(0,0,0,0.70); }
   grid-column: span 4; 
 }
 
-/* PROJECTS */
 .project-head{
   display: flex;
   align-items: center;
@@ -334,27 +332,6 @@ body.light .hero-content p{ color: rgba(0,0,0,0.70); }
   margin-bottom: 8px;
 }
 
-.progress-band{
-  position: absolute;
-  bottom: 110px;          /* or top: 12px if you prefer */
-  left: 0;
-  width: 100%;
-  padding: 10px 0;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  z-index: 3;
-}
-
-body.light .progress-band{
-  color: black;
-  background-color: rgba(202, 202, 202, 0.7);;
-}
-
-/* CONTACT */
 .contact-grid{
   margin-top: 14px;
   display: grid;
@@ -386,7 +363,6 @@ body.light .progress-band{
   font-weight: 600;
 }
 
-/* FOOTER */
 .footer{
   width: min(var(--max), 100%);
   margin: 0 auto;
